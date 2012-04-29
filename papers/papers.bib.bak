@@ -49,7 +49,7 @@
   url = {http://www.sciencedirect.com/science/article/pii/S0034568701003371}
 }
 
-@ARTICLE{CastroRuiz_CastroRuiz_CostasLópez_CenjorEspañol_2005,
+@ARTICLE{CastroRuiz2005,
   author = {Castro Ruiz, P and Castro Ruiz, F and Costas López, A and Cenjor
 	Español, C},
   title = {Computational fluid dynamics simulations of the airflow in the human
@@ -109,12 +109,10 @@
   title = {Simulation of airflow in a realistic CT-scan derived lung geometry},
   school = {Delft University of Technology},
   year = {2001},
-  abstract = {},
-  file = {:Deun2001.pdf:PDF},
-  keywords = {}
+  file = {:Deun2001.pdf:PDF}
 }
 
-@INCOLLECTION{springerlink:10.1007/978-3-642-15621-2_50,
+@INCOLLECTION{Di2010,
   author = {Di, Yijuan and Fei, Minrui and Sun, Xin and Yang, T.},
   title = {Modeling of the Human Bronchial Tree and Simulation of Internal Airflow:
 	A Review},
@@ -161,7 +159,7 @@
   tags = {lattice-boltzmann, lung}
 }
 
-@ARTICLE{Gemci_Ponyavin_Chen_Chen_Collins_2008,
+@ARTICLE{Gemci2008,
   author = {Gemci, T and Ponyavin, V and Chen, Y and Chen, H and Collins, R},
   title = {Computational model of airflow in upper 17 generations of human respiratory
 	tract.},
@@ -186,7 +184,7 @@
   file = {:Gemci2007.pdf:PDF}
 }
 
-@INCOLLECTION{springerlink:10.1007/978-3-642-15615-1_69,
+@INCOLLECTION{Huang2010,
   author = {Huang, Renhan and Rong, Qiguo},
   title = {Respiration Simulation of Human Upper Airway for Analysis of Obstructive
 	Sleep Apnea Syndrome},
@@ -204,7 +202,7 @@
   url = {http://dx.doi.org/10.1007/978-3-642-15615-1_69}
 }
 
-@INCOLLECTION{springerlink:10.1007/978-1-4419-7350-4_10,
+@INCOLLECTION{Kaczka2011,
   author = {Kaczka, David W. and Colletti, Ashley A. and Tawhai, Merryn H. and
 	Simon, Brett A.},
   title = {Computational Analyses of Airway Flow and Lung Tissue Dynamics},
@@ -252,7 +250,7 @@
   tags = {medicine, modelling, lung, acini}
 }
 
-@ARTICLE{Kleinstreuer2008128,
+@ARTICLE{Kleinstreuer2008,
   author = {Kleinstreuer, Clement and Zhang, Zhe and Li, Zheng},
   title = {{Modeling airflow and particle transport/deposition in pulmonary
 	airways}},
@@ -286,7 +284,7 @@
   url = {http://www.sciencedirect.com/science/article/B6X16-4SYTC99-1/2/f6c032db407915685fa9132b14e7013f}
 }
 
-@ARTICLE{Kuklane_Holmér_2002,
+@ARTICLE{Kuklane2002,
   author = {Kuklane, Kalev and Holmér, Ingvar},
   title = {Respiratory flow patterns during physical work with respirators},
   year = {2002},
@@ -308,7 +306,20 @@
   tags = {TO_READ, lung}
 }
 
-@INBOOK{Lin_Hu_2009,
+@INCOLLECTION{LIN2009,
+  author = {CHING-LONG LIN and MERRYN H. TAWHAI and GEOFFREY MCLENNAN and AND
+	ERIC A. HOFFMAN},
+  title = {Multiscale Simulation of Gas Flow in Subject-Specific Models of the
+	Human Lung},
+  booktitle = {Computational Fluid Dynamics},
+  publisher = {IEEE},
+  year = {2009},
+  file = {:LIN2009.pdf:PDF},
+  owner = {rpinho},
+  timestamp = {2012.04.29}
+}
+
+@INBOOK{Lin2009,
   pages = {1473--1476},
   title = {Geometric model reconstruction of the real human upper respiratory
 	tract for compute simulation},
@@ -334,7 +345,7 @@
   tags = {TO_READ, lung, modelling, mesh}
 }
 
-@ARTICLE{Martonen_Quan_Zhang_Musante_2002,
+@ARTICLE{Martonen2002,
   author = {Martonen, Ted B and Quan, Liang and Zhang, Zongqin and Musante, C
 	J},
   title = {Flow simulation in the human upper respiratory tract.},
@@ -346,7 +357,7 @@
   url = {http://www.ncbi.nlm.nih.gov/pubmed/12398415}
 }
 
-@ARTICLE{Martonen_Zhang_Yu_Musante_2001,
+@ARTICLE{Martonen2001,
   author = {Martonen, T B and Zhang, Z and Yu, G and Musante, C J},
   title = {Three-dimensional computer modeling of the human upper respiratory
 	tract.},
@@ -358,7 +369,21 @@
   url = {http://www.ncbi.nlm.nih.gov/pubmed/11894845}
 }
 
-@ARTICLE{Painter_Cunningham_1992,
+@ARTICLE{Mylavarapu2009,
+  author = {Goutham Mylavarapu and Shanmugam Murugappan and Mihai Mihaescu and
+	Maninder Kalra and Sid Khosla and Ephraim Gutmark},
+  title = {Validation of computational fluid dynamics methodology used for human
+	upper airway flow simulations},
+  journal = {Journal of Biomechanics},
+  year = {2009},
+  volume = {42},
+  pages = {1553-1559},
+  file = {:Mylavarapu2009.pdf:PDF},
+  owner = {rpinho},
+  timestamp = {2012.04.29}
+}
+
+@ARTICLE{Painter1992,
   author = {Painter, R and Cunningham, D J},
   title = {Analyses of human respiratory flow patterns.},
   journal = {Respiration Physiology},
@@ -368,7 +393,7 @@
   number = {3}
 }
 
-@ARTICLE{Qian_Chen_Wu_Jiao_2010,
+@ARTICLE{Qian2010,
   author = {Qian, Yu-mei and Chen, Li-ping and Wu, Ya-dong and Jiao, Ting},
   title = {[Reconstruction of three-dimensional numerical model and numerical
 	simulation of airflow in a human upper airway].},
@@ -397,7 +422,7 @@
   timestamp = {2012.04.29}
 }
 
-@ARTICLE{Sun_Yu_Liu_Zheng_Zhang_2006,
+@ARTICLE{Sun2006,
   author = {Sun, Xiuzhen and Yu, Shen and Liu, Yingxi and Zheng, Zhaopan and
 	Zhang, Jun},
   title = {Three dimensional reconstruction of the nasal cavity structure and
@@ -410,7 +435,7 @@
   number = {6}
 }
 
-@ARTICLE{springerlink:10.1007/s12650-010-0043-0,
+@ARTICLE{Sznitman2010,
   author = {Sznitman, J. and Sutter, R. and Altorfer, D. and Stampanoni, M. and
 	Rösgen, T. and Schittny, J.},
   title = {Visualization of respiratory flows from 3D reconstructed alveolar
@@ -466,7 +491,7 @@
   tags = {lung, acini, TO_FIND}
 }
 
-@ARTICLE{Tawhai01122004,
+@ARTICLE{Tawhai2004,
   author = {Tawhai, Merryn H. and Hunter, Peter and Tschirren, Juerg and Reinhardt,
 	Joseph and McLennan, Geoffrey and Hoffman, Eric A.},
   title = {CT-based geometry analysis and finite element models of the human
@@ -502,6 +527,7 @@
 	for application in simulation studies. },
   doi = {10.1152/japplphysiol.00520.2004},
   eprint = {http://jap.physiology.org/content/97/6/2310.full.pdf+html},
+  file = {:Tawhai2004.pdf:PDF},
   url = {http://jap.physiology.org/content/97/6/2310.abstract}
 }
 
@@ -521,7 +547,7 @@
   url = {http://dx.doi.org/10.1002/jmri.22382}
 }
 
-@INCOLLECTION{springerlink:10.1007/978-1-4419-7350-4_1,
+@INCOLLECTION{Thedens2011,
   author = {Thedens, Daniel R.},
   title = {Image Acquisition for Cardiovascular and Pulmonary Applications},
   booktitle = {Image-Based Computational Modeling of the Human Circulatory and Pulmonary
@@ -539,7 +565,7 @@
   url = {http://dx.doi.org/10.1007/978-1-4419-7350-4_1}
 }
 
-@INCOLLECTION{springerlink:10.1007/978-1-4419-7350-4_5,
+@INCOLLECTION{Vigmostad2011,
   author = {Vigmostad, Sarah C. and Udaykumar, H.S.},
   title = {Algorithms for Fluid?Structure Interaction},
   booktitle = {Image-Based Computational Modeling of the Human Circulatory and Pulmonary
@@ -557,7 +583,7 @@
   url = {http://dx.doi.org/10.1007/978-1-4419-7350-4_5}
 }
 
-@INCOLLECTION{springerlink:10.1007/978-1-4419-7350-4_2,
+@INCOLLECTION{Wahle2011,
   author = {Wahle, Andreas and Zhang, Honghai and Zhao, Fei and Lee, Kyungmoo
 	and Downe, Richard W. and Olszewski, Mark E. and Ukil, Soumik and
 	Tschirren, Juerg and Shikata, Hidenori and Sonka, Milan},
@@ -604,7 +630,7 @@
   url = {http://www.springerlink.com/index/10.1007/s10409-009-0283-1}
 }
 
-@ARTICLE{rohtua,
+@ARTICLE{WEIBEL1965,
   author = {EWALD R. WEIBEL},
   title = {{Morphometry of the Human Lung}},
   journal = {Anesthesiology},
@@ -738,7 +764,7 @@
   url = {http://www.sciencedirect.com/science/article/B6V6B-4TG35MC-1/2/21949a30319d9b21a9956b3ff4f1f39a}
 }
 
-@INCOLLECTION{springerlink:10.1007/978-1-4419-7350-4_9,
+@INCOLLECTION{Zelicourt2011,
   author = {Zélicourt, Diane A. and Steele, Brooke N. and Yoganathan, Ajit P.},
   title = {Advances in Computational Simulations for Interventional Treatments
 	and Surgical Planning},
