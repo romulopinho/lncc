@@ -14,6 +14,67 @@
   timestamp = {2012.04.29}
 }
 
+@ARTICLE{Baretta2012,
+  author = {Alessia Baretta and Chiara Corsini and Alison L. Marsden and Irene
+	E. Vignon-Clementel and Tain-Yen Hsia and Gabriele Dubini and Francesco
+	Migliavacca and Giancarlo Pennati},
+  title = {Respiratory effects on hemodynamics in patient-specific CFD models
+	of the Fontan circulation under exercise conditions},
+  journal = {European Journal of Mechanics - B/Fluids},
+  year = {2012},
+  pages = { - },
+  number = {0},
+  abstract = {Single ventricle malformations are complex congenital heart defects
+	which require a three-stage surgical treatment, starting from the
+	very first days of life, to separate the systemic and pulmonary circulations,
+	and restore the serial circuit occurring in normal patients. The
+	final surgery results in a total cavopulmonary connection (TCPC),
+	where both the superior and the inferior vena cava are connected
+	to the right pulmonary artery. Several clinical and computational
+	studies have been done to optimize the geometry of the TCPC, with
+	the aim of minimizing energy losses and improving surgical outcomes.
+	To date, only few modeling studies have taken into account respiration
+	and exercise as important factors to quantify the performance of
+	a Fontan geometry.
+	
+	The objective of this work is to test the dependence of fluid dynamic
+	variables and energy efficiency on respiration in patient-specific
+	models of Fontan circulation, when subjected to exercise tests.
+	
+	A closed-loop multiscale approach was used, including a simple respiration
+	model that modulates the extravascular pressures in the thoracic
+	and abdominal cavities, to generate physiologic time-varying flow
+	conditions. A lumped parameter network (LPN) representing the whole
+	circulation was coupled to a patient-specific 3D finite volume model
+	of the preoperative bidirectional cavo-pulmonary anastomosis (BCPA)
+	with detailed pulmonary anatomy. Subsequently, three virtual TCPC
+	alternatives were coupled to the LPN and investigated in terms of
+	both local and global hemodynamics. In particular, a T-junction of
+	the venae cavae to the pulmonary arteries, a design with an offset
+	between the venae cavae and a Y-graft design were compared under
+	exercise conditions.
+	
+	Results showed that the BCPA model is able to realistically capture
+	oscillations due to both cardiac and respiratory effects, when compared
+	to the venous Doppler velocity tracings acquired preoperatively on
+	the patient.
+	
+	The differences in hemodynamics between the three investigated TCPC
+	options were minimal and similar to those obtained without inclusion
+	of respiratory effects. Hence, the three surgical options result
+	to be equivalent according to the analyzed parameters.
+	
+	Moreover, although the simulation of the Fontan circulation with a
+	respiratory model requires a longer computational time, the developed
+	framework allows for a more physiologic method to incorporate respiratory
+	effects that was not possible using other methods.},
+  doi = {10.1016/j.euromechflu.2012.01.012},
+  file = {:Baretta2012.pdf:PDF},
+  issn = {0997-7546},
+  keywords = {Computational fluid dynamics},
+  url = {http://www.sciencedirect.com/science/article/pii/S0997754612000131}
+}
+
 @UNPUBLISHED{Blanco2011,
   author = {P.J. Blanco and R.A. Feijóo},
   title = {A dimensionally-heterogeneous closed-loop model for the cardiovascular
@@ -35,7 +96,7 @@
   timestamp = {2012.04.29}
 }
 
-@ARTICLE{Calay2002201,
+@ARTICLE{Calay2002,
   author = {R.K. Calay and Jutarat Kurujareon and Arne Erik Holdø},
   title = {Numerical simulation of respiratory flow patterns within human lung},
   journal = {Respiratory Physiology \&amp; Neurobiology},
@@ -44,6 +105,7 @@
   pages = {201 - 221},
   number = {2},
   doi = {10.1016/S0034-5687(01)00337-1},
+  file = {:Calay2002.pdf:PDF},
   issn = {1569-9048},
   keywords = {Airways, airflow, modeling},
   url = {http://www.sciencedirect.com/science/article/pii/S0034568701003371}
@@ -182,6 +244,59 @@
   pages = {5-18},
   number = {1},
   file = {:Gemci2007.pdf:PDF}
+}
+
+@ARTICLE{Hofmann2011,
+  author = {Werner Hofmann},
+  title = {Modelling inhaled particle deposition in the human lung?A review},
+  journal = {Journal of Aerosol Science},
+  year = {2011},
+  volume = {42},
+  pages = {693 - 724},
+  number = {10},
+  abstract = {Particle deposition in the human respiratory tract is determined by
+	biological factors such as lung morphology and breathing patterns,
+	and physical factors such as fluid dynamics, particle properties,
+	and deposition mechanisms. Current particle deposition models may
+	be grouped into two categories referring to the region of interest
+	in the lung, i.e. either deposition in the whole lung (whole lung
+	models), or deposition in a localized region of the lung (local scale
+	models). In whole lung models, particle deposition in individual
+	airways is computed by analytical equations for particle deposition
+	efficiencies and specific flow conditions (analytical models). The
+	present review focuses upon the philosophy of different conceptual
+	whole lung models to determine deposition in bronchial and acinar
+	airway generations, and to compare the deposition patterns predicted
+	by these models. Since any modelling approach requires validation
+	by comparison with the available experimental evidence, predicted
+	deposition data are compared with published experimental data in
+	human subjects. This comparison indicates that, at least during the
+	writing of this review, deposition models can be validated only for
+	total and, to some extent, for regional deposition. In local scale
+	models, particle transport and deposition equations are solved by
+	Computational Fluid and Particle Dynamics (CFPD) methods (numerical
+	models), providing information on particle deposition patterns within
+	selected structural elements of the lung, e.g. bronchial bifurcations.
+	In this review, however, only their potential contribution to improve
+	upon current analytical whole lung models will be considered.},
+  doi = {10.1016/j.jaerosci.2011.05.007},
+  file = {:Hofmann2011.pdf:PDF},
+  issn = {0021-8502},
+  keywords = {Human lung},
+  url = {http://www.sciencedirect.com/science/article/pii/S0021850211000875}
+}
+
+@ARTICLE{Horsfield01031968,
+  author = {Horsfield, K and Cumming, G},
+  title = {Morphology of the bronchial tree in man.},
+  journal = {Journal of Applied Physiology},
+  year = {1968},
+  volume = {24},
+  pages = {373-83},
+  number = {3},
+  eprint = {http://jap.physiology.org/content/24/3/373.full.pdf+html},
+  file = {:Horsfield01031968.html:URL},
+  url = {http://jap.physiology.org/content/24/3/373.short}
 }
 
 @INCOLLECTION{Huang2010,
@@ -343,6 +458,46 @@
   url = {http://www.scopus.com/inward/record.url?eid=2-s2.0-77949590640&partnerID=40&md5=86a25646539a42ba54409afeae563fc7}
 }
 
+@ARTICLE{Longest2012,
+  author = {P. Worth Longest and Landon T. Holbrook},
+  title = {In silico models of aerosol delivery to the respiratory tract ? Development
+	and applications},
+  journal = {Advanced Drug Delivery Reviews},
+  year = {2012},
+  volume = {64},
+  pages = {296 - 311},
+  number = {4},
+  note = {<ce:title>Computational and Visualization approaches in Respiratory
+	Delivery</ce:title>},
+  abstract = {This review discusses the application of computational models to simulate
+	the transport and deposition of inhaled pharmaceutical aerosols from
+	the site of particle or droplet formation to deposition within the
+	respiratory tract. Traditional one-dimensional (1-D) whole-lung models
+	are discussed briefly followed by a more in-depth review of three-dimensional
+	(3-D) computational fluid dynamics (CFD) simulations. The review
+	of CFD models is organized into sections covering transport and deposition
+	within the inhaler device, the extrathoracic (oral and nasal) region,
+	conducting airways, and alveolar space. For each section, a general
+	review of significant contributions and advancements in the area
+	of simulating pharmaceutical aerosols is provided followed by a more
+	in-depth application or case study that highlights the challenges,
+	utility, and benefits of in silico models. Specific applications
+	presented include the optimization of an existing spray inhaler,
+	development of charge-targeted delivery, specification of conditions
+	for optimal nasal delivery, analysis of a new condensational delivery
+	approach, and an evaluation of targeted delivery using magnetic aerosols.
+	The review concludes with recommendations on the need for more refined
+	model validations, use of a concurrent experimental and CFD approach
+	for developing aerosol delivery systems, and development of a stochastic
+	individual path (SIP) model of aerosol transport and deposition throughout
+	the respiratory tract.},
+  doi = {10.1016/j.addr.2011.05.009},
+  file = {:Longes2012.pdf:PDF},
+  issn = {0169-409X},
+  keywords = {Respiratory drug delivery},
+  url = {http://www.sciencedirect.com/science/article/pii/S0169409X11001244}
+}
+
 @ARTICLE{Longest07,
   author = {Longest, P Worth and Vinchurkar, Samir},
   title = {{Effects of mesh style and grid convergence on particle deposition
@@ -389,10 +544,40 @@
   journal = {Journal of Biomechanics},
   year = {2009},
   volume = {42},
-  pages = {1553-1559},
+  pages = {1553 - 1559},
+  number = {10},
+  abstract = {An anatomically accurate human upper airway model was constructed
+	from multiple magnetic resonance imaging axial scans. This model
+	was used to conduct detailed Computational Fluid Dynamics (CFD) simulations
+	during expiration, to investigate the fluid flow in the airway regions
+	where obstruction could occur. An identical physical model of the
+	same airway was built using stereo lithography. Pressure and velocity
+	measurements were conducted in the physical model. Both simulations
+	and experiments were performed at a peak expiratory flow rate of
+	200&#xa0;L/min. Several different numerical approaches within the
+	FLUENT commercial software framework were used in the simulations;
+	unsteady Large Eddy Simulation (LES), steady Reynolds-Averaged Navier-Stokes
+	(RANS) with two-equation turbulence models (i.e. k??, standard k??,
+	and k?? Shear Stress Transport (SST)) and with one-equation Spalart?Allmaras
+	model. The CFD predictions of the average wall static pressures at
+	different locations along the airway wall were favorably compared
+	with the experimental data. Among all the approaches, standard k??
+	turbulence model resulted in the best agreement with the static pressure
+	measurements, with an average error of ?20% over all ports. The highest
+	positive pressures were observed in the retroglossal regions below
+	the epiglottis, while the lowest negative pressures were recorded
+	in the retropalatal region. The latter is a result of the airflow
+	acceleration in the narrow retropalatal region. The largest pressure
+	drop was observed at the tip of the soft palate. This location has
+	the smallest cross section of the airway. The good agreement between
+	the computations and the experimental results suggest that CFD simulations
+	can be used to accurately compute aerodynamic flow characteristics
+	of the upper airway.},
+  doi = {10.1016/j.jbiomech.2009.03.035},
   file = {:Mylavarapu2009.pdf:PDF},
-  owner = {rpinho},
-  timestamp = {2012.04.29}
+  issn = {0021-9290},
+  keywords = {Pharyngeal airway},
+  url = {http://www.sciencedirect.com/science/article/pii/S0021929009001341}
 }
 
 @ARTICLE{Painter1992,
@@ -666,6 +851,47 @@
   doi = {10.1097/00000542-196505000-00023},
   issue = {3},
   masid = {31923209}
+}
+
+@ARTICLE{Wilson2009,
+  author = {A.J. Wilson and C.M. Murphy and B.S. Brook and D. Breen and A.W.
+	Miles and D.G. Tilley},
+  title = {A computer model of the artificially ventilated human respiratory
+	system in adult intensive care},
+  journal = {Medical Engineering \&amp; Physics},
+  year = {2009},
+  volume = {31},
+  pages = {1118 - 1133},
+  number = {9},
+  abstract = {A multi-technique approach to modelling artificially ventilated patients
+	on the adult general intensive care unit (ICU) is proposed. Compartmental
+	modelling techniques were used to describe the mechanical ventilator
+	and the flexible hoses that connect it to the patient. 3D CFD techniques
+	were used to model flow in the major airways and a Windkessel style
+	balloon model was used to model the mechanical properties of the
+	lungs. A multi-compartment model of the lung based on bifurcating
+	tree structures representing the conducting airways and pulmonary
+	circulation allowed lung disease to be modelled in terms of altered
+	V ? / Q ? ratios within a lognormal distribution of values and it
+	is from these that gas exchange was determined. A compartmental modelling
+	tool, Bathfp, was used to integrate the different modelling techniques
+	into a single model. The values of key parameters in the model could
+	be obtained from measurements on patients in an ICU whilst a sensitivity
+	analysis showed that the model was insensitive to the value of other
+	parameters within it. Measured and modelled values for arterial blood
+	gases and airflow parameters are compared for 46 ventilator settings
+	obtained from 6 ventilator dependent patients. The results show correlation
+	coefficients of 0.88 and 0.85 for the arterial partial pressures
+	of the O2 and CO2, respectively (p&#xa0;&lt;&#xa0;0.01) and of 0.99
+	and 0.96 for upper airway pressure and tidal volume, respectively
+	(p&#xa0;&lt;&#xa0;0.01). The difference between measured and modelled
+	values was large in physiological terms, suggesting that some optimisation
+	of the model is required.},
+  doi = {10.1016/j.medengphy.2009.07.009},
+  file = {:Wilson2009.pdf:PDF},
+  issn = {1350-4533},
+  keywords = {Respiratory system},
+  url = {http://www.sciencedirect.com/science/article/pii/S1350453309001544}
 }
 
 @ARTICLE{Yeh1980461,
