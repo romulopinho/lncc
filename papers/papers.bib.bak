@@ -434,7 +434,7 @@
   timestamp = {2012.04.29}
 }
 
-@ARTICLE{,
+@ARTICLE{Schmidt2004,
   author = {Andreas Schmidt and Stephan Zidowitz and Andres Kriete and Thorsten
 	Denhard and Stefan Krass and Heinz-Otto Peitgen},
   title = {A digital reference model of the human bronchial tree},
@@ -444,6 +444,7 @@
   pages = {203-211},
   number = {4},
   doi = {10.1016/j.compmedimag.2004.01.001},
+  file = {:Schmidt2004.pdf:PDF},
   owner = {rpinho},
   timestamp = {2012.04.29}
 }
