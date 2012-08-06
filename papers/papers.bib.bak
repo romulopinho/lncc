@@ -125,6 +125,40 @@
   url = {http://acta.otorrinolaringol.esp.medynet.com/textocompleto/acta_ing19/4.pdf}
 }
 
+@ARTICLE{Chang1982,
+  author = {H.K. Chang and Osama A. El Masry},
+  title = {A model study of flow dynamics in human central airways. Part I:
+	Axial velocity profiles},
+  journal = {Respiration Physiology},
+  year = {1982},
+  volume = {49},
+  pages = {75 - 95},
+  number = {1},
+  abstract = {We measured detailed steady inspiratory and expiratory velocity profiles
+	in a 3:1 scale model of the human central airways. The model was
+	constructed out of acrylic plastic, mounted vertically, and connected
+	to a specially designed steady-flow system. Laterally introduced
+	hot-wire anemoneter probes were used to record axial velocities along
+	4 diameters at each of the 12 pre-drilled stations of measurement;
+	the flow distribution among the five lobar bronchi was controlled
+	by distally positioned linear resistors. Whether with a flat entrance
+	profile or entering as a narrow jet, the inspiratory flow velocity
+	profiles in the frontal plane showed a high degree of asymmetry in
+	all branches, with peak velocities near the wall of the bifurcation.
+	In the signal plane the velocity profiles were nearly symmetric,
+	exhibiting a single peak near the center in the frontal plane and
+	almost flat in the sagital plane. Overall, the velocity profiles
+	were more sensitive to airway geometry than to flow rate. The only
+	site of flow separation was observd in the right upper lobar bronchus.
+	The most evident modification of axial velocity profiles in a single
+	branch was found in the left main bronchus during expiratory flow.},
+  doi = {10.1016/0034-5687(82)90104-9},
+  file = {:Chang1982.pdf:PDF},
+  issn = {0034-5687},
+  keywords = {Air flow patterns},
+  url = {http://www.sciencedirect.com/science/article/pii/0034568782901049}
+}
+
 @ARTICLE{DeBacker2010,
   author = {De Backer, Jan W. and Vos, Wim G. and Vinchurkar, Samir C. and Claes,
 	Rita and Drollmann, Anton and Wulfrank, Denis and Parizel, Paul M.
@@ -202,23 +236,46 @@
 }
 
 @ARTICLE{Freitas2008,
-  author = {Freitas, RK and Schroder, W},
-  title = {{Numerical investigation of the three-dimensional flow in a human
-	lung model}},
-  journal = {Journal Of Biomechanics},
+  author = {Rainhill K. Freitas and Wolfgang Schröder},
+  title = {Numerical investigation of the three-dimensional flow in a human
+	lung model},
+  journal = {Journal of Biomechanics},
   year = {2008},
   volume = {41},
-  pages = {2446-2457},
-  abstract = {Most of the images were generated using the Paraview visualization
-	software developed by Kitware, Sandia Labs and CSimSoft. The support
-	of the Deutsche Forschungsgemeinschaft (DFG) for this research is
-	gratefully acknowledged.},
+  pages = {2446 - 2457},
+  number = {11},
+  abstract = {The flow field at inspiration and expiration in the upper human airways
+	consisting of the trachea down to the sixth generation of the bronchial
+	tree is numerically simulated. The three-dimensional steady flow
+	at a hydraulic diameter-based Reynolds number ReD=1250 is computed
+	via a lattice-Boltzmann method (LBM). The simulation is validated
+	by the experimental data based on particle-image velocimetry (PIV)
+	measurements. The good agreement between numerical and experimental
+	results is evidenced by comparing velocity contours and distributions
+	in a defined reference plane. The results show the LBM to be an accurate
+	tool to numerically predict flow structures in the human lung. Using
+	an automatic Cartesian grid generator, the overall process time from
+	meshing to a steady-state solution is &lt;12&#xa0;h. Moreover, the
+	numerical simulation allows a closer analysis of the secondary flow
+	structures than in the experimental investigation. The three-dimensional
+	streamline patterns reveal some insight on the air exchange mechanism
+	at inspiration and expiration. At inspiration, the slower near-wall
+	tracheal flow enters through the right principal bronchus into the
+	right upper lobar bronchus. The bulk mass flux in the trachea is
+	nearly evenly distributed over the left upper, center and lower lobar
+	bronchi and the right center and lower bronchi. At expiration, the
+	air from the right upper lobar bronchus enters the right center of
+	the trachea and displaces the airflow from the lower and center right
+	bronchi such that the tracheal positions of the streamlines at inspiration
+	and expiration are switched. The flow in the left bronchi does not
+	show this kind of switching. The findings emphasize the impact of
+	the asymmetry of the lung geometry on the respiratory air exchange
+	mechanism.},
   doi = {10.1016/j.jbiomech.2008.05.016},
-  keywords = {lattice Boltmann, human lung caste, human airways, respiratory flow
-	simulation, LATTICE BOLTZMANN METHODS, AIR-FLOW, SYMMETRICAL BIFURCATION,
-	PARTICLE DEPOSITION, INSPIRATORY FLOW, AIRWAYS, STEADY, FLUID, SIMULATION,
-	PATTERNS},
-  tags = {lattice-boltzmann, lung}
+  file = {:Freitas2008.pdf:PDF},
+  issn = {0021-9290},
+  keywords = {Lattice Boltzmann},
+  url = {http://www.sciencedirect.com/science/article/pii/S0021929008002546}
 }
 
 @ARTICLE{Gemci2008,
@@ -458,6 +515,39 @@
   url = {http://www.scopus.com/inward/record.url?eid=2-s2.0-77949590640&partnerID=40&md5=86a25646539a42ba54409afeae563fc7}
 }
 
+@ARTICLE{Liu2003,
+  author = {Y. Liu and R.M.C. So and C.H. Zhang},
+  title = {Modeling the bifurcating flow in an asymmetric human lung airway},
+  journal = {Journal of Biomechanics},
+  year = {2003},
+  volume = {36},
+  pages = {951 - 959},
+  number = {7},
+  abstract = {In a former paper, the inspiratory flow characteristics in a three-generation
+	symmetric bifurcation airway have been numerically investigated using
+	a control volume method to solve the fully three-dimensional laminar
+	Navier-Stokes equations. The present paper extends the work to deal
+	with asymmetric airway extracted from the 5th?11th branches of the
+	model of Weibel (Morphometry of the Human Lung. New York Academic
+	Press, Verlag, 1963) in order to more appropriately model human air
+	passage. Computations are carried out in the Reynolds number range
+	200?1600, corresponding to mouth-air breathing rates ranging from
+	0.27 to 2.16&#xa0;l/s, representative for an averaged height man
+	breathing from quiet to vigorous state. Particular attentions are
+	paid to establishing relations between the Reynolds number and the
+	overall flow characteristics, including flow patterns and pressure
+	drop. The study shows that the ratios of airflow rate through the
+	medial branches to that of their mother branches are the same, and
+	this is also true for the ratios of airflow rate through the lateral
+	branches. This partially explains why regular human breathing is
+	not affected by airways of different sizes.},
+  doi = {10.1016/S0021-9290(03)00064-2},
+  file = {:Liu2003.pdf:PDF},
+  issn = {0021-9290},
+  keywords = {Asymmetric bifurcation flow},
+  url = {http://www.sciencedirect.com/science/article/pii/S0021929003000642}
+}
+
 @ARTICLE{Longest2012,
   author = {P. Worth Longest and Landon T. Holbrook},
   title = {In silico models of aerosol delivery to the respiratory tract ? Development
@@ -510,6 +600,20 @@
   doi = {10.1016/j.medengphy.2006.05.012},
   pmid = {16814588},
   tags = {TO_READ, lung, modelling, mesh}
+}
+
+@ARTICLE{TawhaiM2011,
+  author = {Tawhai M. and Clark A. and Donovan G. and Burrowes K},
+  title = {Computational modeling of airway and pulmonary vascular structure
+	and function: development of a "lung physiome"},
+  journal = {Crit Rev Biomed Eng.},
+  year = {2011},
+  volume = {39},
+  pages = {319-336},
+  number = {4},
+  file = {:TawhaiM2011.pdf:PDF},
+  owner = {rpinho},
+  timestamp = {2012.08.06}
 }
 
 @ARTICLE{Martonen2002,
