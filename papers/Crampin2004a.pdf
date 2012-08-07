@@ -1,0 +1,91 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html
+      xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Computational physiology and the physiome project </title>
+      <meta name="googlebot" content="NOODP" />
+      <meta name="HW.ad-path" content="/cgi/content/reprint/89/1/1" />
+      <meta content="/expphysiol/89/1/1.atom" name="HW.identifier" />
+      <meta name="DC.Format" content="text/html" />
+      <meta name="DC.Language" content="en" />
+      <meta content="Computational physiology and the physiome project" name="DC.Title" />
+      <meta content="10.1113/expphysiol.2003.026740" name="DC.Identifier" />
+      <meta content="2004-01-01" name="DC.Date" />
+      <meta content="The Physiological Society" name="DC.Publisher" />
+      <meta content="Edmund J. Crampin" name="DC.Contributor" />
+      <meta content="Matthew Halstead" name="DC.Contributor" />
+      <meta content="Peter Hunter" name="DC.Contributor" />
+      <meta content="Poul Nielsen" name="DC.Contributor" />
+      <meta content="Denis Noble" name="DC.Contributor" />
+      <meta content="Nicolas Smith" name="DC.Contributor" />
+      <meta content="Merryn Tawhai" name="DC.Contributor" />
+      <meta content="Experimental Physiology" name="citation_journal_title" />
+      <meta content="Exp Physiol" name="citation_journal_abbrev" />
+      <meta content="0958-0670" name="citation_issn" />
+      <meta content="1469-445X" name="citation_issn" />
+      <meta name="citation_author" content="Edmund J. Crampin" />
+      <meta name="citation_author" content="Matthew Halstead" />
+      <meta name="citation_author" content="Peter Hunter" />
+      <meta name="citation_author" content="Poul Nielsen" />
+      <meta name="citation_author" content="Denis Noble" />
+      <meta name="citation_author" content="Nicolas Smith" />
+      <meta name="citation_author" content="Merryn Tawhai" />
+      <meta content="Computational physiology and the physiome project"
+            name="citation_title" />
+      <meta content="01/01/2004" name="citation_date" />
+      <meta content="89" name="citation_volume" />
+      <meta content="1" name="citation_issue" />
+      <meta content="1" name="citation_firstpage" />
+      <meta content="26" name="citation_lastpage" />
+      <meta content="89/1/1" name="citation_id" />
+      <meta content="expphysiol;89/1/1" name="citation_mjid" />
+      <meta content="10.1113/expphysiol.2003.026740" name="citation_doi" />
+      <meta content="http://ep.physoc.org/content/89/1/1.abstract"
+            name="citation_abstract_html_url" />
+      <meta content="http://ep.physoc.org/content/89/1/1.full"
+            name="citation_fulltext_html_url" />
+      <meta content="http://ep.physoc.org/content/89/1/1.full.pdf" name="citation_pdf_url" />
+      <meta content="http://ep.physoc.org/content/89/1/1" name="citation_public_url" />
+      <meta content="15109205" name="citation_pmid" />
+      <meta name="citation_section" content="Review articles" />
+      <meta name="robots" content="noarchive,nofollow" />
+      <meta name="googlebot" content="noarchive" />
+      <link href="/content/88/6/783.short" rel="prev" />
+      <link href="/content/89/1/27.short" rel="next" />
+      <link rel="stylesheet" type="text/css" href="/shared/css/hw-global.css" />
+      <link rel="stylesheet" type="text/css" href="/shared/css/hw-print.css" />
+      <link rel="stylesheet" type="text/css"
+            href="/shared/css/standard-designs/design2/main.css" />
+      <link rel="stylesheet" type="text/css" href="/publisher/css/hw-publisher-global.css" />
+      <link rel="stylesheet" type="text/css"
+            href="/publisher/css/hw-publisher-page-toc.css" />
+      <link rel="stylesheet" type="text/css"
+            href="/publisher/css/hw-publisher-sidebars.css" />
+      <link rel="stylesheet" type="text/css"
+            href="/publisher/css/hw-publisher-supplement.css" />
+      <link rel="stylesheet" type="text/css" href="/local/css/hw-journal-global.css" />
+      <link rel="stylesheet" type="text/css" href="/local/css/hw-journal-sidebars.css" />
+      <link rel="stylesheet" type="text/css" href="/shared/css/hw-page-content.css" />
+      <link rel="stylesheet" type="text/css" href="/shared/css/jquery.fancybox-1.3.4.css" />
+      <link rel="stylesheet" type="text/css"
+            href="/publisher/css/hw-publisher-page-content.css" /><script type="text/javascript" src="/shared/js/jquery-min.js"></script><script type="text/javascript" src="/shared/js/hw-shared.js"></script><script type="text/javascript" src="/shared/js/design/hw-design1.js"></script><script type="text/javascript" src="/shared/js/pages/hw-content.js"></script><script type="text/javascript" src="/shared/js/fancybox/jquery.fancybox-1.3.4.js"></script><script type="text/javascript" src="/shared/js/fancybox/jquery.easing-1.3.pack.js"></script><script type="text/javascript"
+              src="/shared/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script></head>
+   <frameset rows="195,*">
+      <frame src="/content/89/1/1.full.pdf+html?frame=header" name="HeaderLinks"
+             title="Header Links Frame"
+             scrolling="auto" />
+      <frameset cols="780,*">
+         <frame src="/content/89/1/1.full.pdf#page=1&amp;view=FitH" name="ContentsPage"
+                title="Contents Frame" />
+         <frame src="/content/89/1/1.full.pdf+html?frame=sidebar" name="SidebarLinks"
+                title="Sidebar Links Frame" />
+      </frameset>
+      <noframes>
+         <body></body>
+      </noframes>
+   </frameset>
+</html>
