@@ -1,0 +1,49 @@
+\chapter[Integration in the Laboratory, Collaborations, Schedule, Resources]
+{
+Integration in the Laboratory, Collaborations, Schedule, Use of Funding
+\medskip\medskip\medskip
+\hrule
+}
+
+\section{Laboratory}
+
+My intention of joining the HeMoLab project of the LNCC is on the one hand to benefit from their expertise in the several areas correlated to this project proposal. In particular, HeMoLab/LNCC is the leading research group of the multi-centre, nationwide-project MACC\footnot{http://macc.lncc.br} (Medicina Assistida por Computação Científica), which focusses on the development of models of blood circulation \citep{}. On the other hand, it will be my role to contribute to group's expertise by 1) bringing to the lab my own experience with the automatic assessment and patient-specific stenting of tracheal stenosis and applying it to the cardiovascular domain and 2) building upon their existing work on the cardiovascular system to develop the proposed lung physiome.
+
+HeMoLab/LNCC also have at their disposal an internal computer cluster for large scale computations. Their expertise in the parallel computing domain and the processing of massive image data with GPUs have been demonstrated through their participation in projects such as the MACC itself and ... Such expertise and tools will be invaluable for the simulation parts of the proposed project. 
+
+Most importantly, HeMoLab/LNCC also profit from a very multidisciplinary nature and strong links with the clinical practice, most notably that of the {\it Instituto do Coração} (Incor). This will give me the opportunity to evaluate the results of the proposed project with real patient data and to have immediate feedback from physicians. 
+
+\section{Collaborations}
+
+During my PhD in Belgium, I established a very good relationship with Prof. Dr. Jan Sijbers, my thesis supervisor, in the VisionLab group of the University of Antwerp. The group has extensive experience with medical image segmentation problems and modelling of cylindrical objects, which could be interesting in the context of this project. In addition, this is the group where the FASTRA technology for GPU acceleration was developed, and they are always interested in new applications for it. I would like to bring the VisionLab and the HeMoLab/LNCC together during the course of the proposed project, so that they can benefit from each other's work.
+
+My stay in Belgium also allowed me to get acquainted with the work of the Stent Research Unit of the University of Ghent. Since their work is focussed on the design of stents using numerical simulations, on which much of this project may be based, it is a potential collaboration opportunity. 
+
+
+
+I also envision collaborations with the academic and industrial partners of the European Project THROMBUS, whose aim is to evaluate the efficacy of the use of stents in neurological aneurysms. These partners combine expertise in different areas and will certainly be a good source of information for this project.
+
+Lastly, an opportunity will be open from early 2014, with the first calls for the UE project ``Horizon 2020''. This will probably be a good chance to join partners such as those in the THROMBUS project or establish new partnerships. 
+
+\section{Tentative Schedule}
+
+\begin{table}[h]\centering
+\begin{tabular}{c|c|c|c|c|c|c|c|c|}
+\cline{2-9}
+ & \multicolumn{2}{|c|}{Y1} & \multicolumn{2}{|c|}{Y2} & \multicolumn{2}{|c|}{Y3} & \multicolumn{2}{|c|}{Y4} \\ \cline{2-9}
+ & S1 & S2 & S3 & S4 & S5 & S6 & S7 & S8  \\ \hline
+\multicolumn{1}{|c|}{Apply existing model} & \cellcolor{green} & & & & & & & \\ \hline
+\multicolumn{1}{|c|}{Segmentation and modelling} & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & & & & \\ \hline
+\multicolumn{1}{|c|}{Stent choice and simulations} & & & & & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} & \cellcolor{green} \\ \hline
+\end{tabular}
+\caption{Tentative project schedule for 4 years, subdivided into semesters.}
+\label{tab:schedule}
+\end{table}
+
+Table \ref{tab:schedule} shows a tentative schedule for the proposed project. The objective in the short term, roughly the first 6 months, is to try to directly apply the ASM used for the trachea to cases of vascular stenosis and aneurysms. There are reasons to believe that this step tends to be rather straightforward, requiring only few modifications to the original method, if any. The possibly biggest challenge would be the segmentation and surface modelling of the vessels, which, in the first instance, could be simplified (e.g., not taking bifurcations into account) and accomplished with existing techniques so as to yield acceptable results in a short period of time. 
+
+The following step, to be carried out during the next 18 months, will be the extension of the ASM with anatomical information about the vascular tree. Bifurcations will also be taken into account. 
+
+Finally, the remaining 24 months will be dedicated to the stent choice and simulation parts. The starting point of this step will be the stent choice with a generic stent and vessel model. In other words, stents' and vessels' physical properties will not be taken into account. In this way, we will be able to at least evaluate if the generic stents computed with the ASM are adequate. Later, blood flow and stent deployment simulation results will be used to improve the statistical model and, ultimately, the automatic stent choice.  
+
+\section{Use of Funding}
