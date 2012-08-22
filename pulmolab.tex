@@ -12,5 +12,45 @@ Part II: The PulmoLab
 
 In \citep{TawhaiM2011}
 
+The main interest here is thus to extend the work developed by the HeMoLab group in the context of the MACC project \citep{Blanco2012,Blanco2010,Blanco2009a,Blanco2007,Golbert2012,Malossi2011,Urquiza2006}, adding to it the modelling of the gas exchange process. Below are the main challenges involved in this process and the propose approaches to solve them.
 
+\section{Segmentation of the Airway Tree}
+
+\challenge
+
+The segmentation of the airway tree has been a topic of study for quite some time, but the automatic segmentation remains an open problem. Achieving correct manual (or semi-automatic) segmentation can be painstaking, non-reproducible, and prone to error. Still, state-of-art automatic algorithms still fall short of achieving the same results obtained with manual interventions \citep{Lo}. The complexity lies in the little image resolution at the lower levels of the airway tree. Noise and other artefacts such as partial volume effect makes the automatic identification of smaller branches
+even more difficult.
+
+\approach
+
+One algorithm for the automatic segmentation of airway trees \citep{Pinho:Airways2} implements an iterative region growing with adaptive, cylindrical ROIs that employs anatomical information in the detection and elimination of leaks, a common problem in region growing. The method also includes an initialization step to automatically detect the starting point of the trachea, which is given as a seed point to the region growing algorithm. 
+
+The intention is to further extend the referred method and try to incorporate new ideas from the litterature \citep{Lo} in order to increase the branch detection count and to reduce the number of segmentation leaks and false positves. For example, tube enhancement filters \citep{ORLO-09} may help in at least isolating the tubular structures in the image, from where the detection process may be triggered. Branch generation algorithms \citep{Tawhai2000} will also be investigated.
+
+\section{Segmentation of the Pulmonary Vascular Tree}
+
+\challenge
+
+In \citep{Dongen,Ebrahimdoost,Gutierrez,Linguraru,Shikata,Wala}
+
+\approach
+
+
+\section{Airflow and Gas Exchange Simulations}
+
+\challenge
+
+On the one hand, this is probably the most challenging part of the PulMoLab proposal. On the other hand, it is also the one that tends to benefit the most from the expertise of the MACC/HeMoLab/LNCC in the modelling and simulations of the human vascular system. 
+
+\approach
+
+\section{Correlations Between Pulmonary Structure and Function}
+
+\challenge
+
+As stated before, one the most significant benefits of airflow and gas exchange simulations is to establish correlations between lung structure and function. In other words, the aim to answer questions such as how the shape of the airways influences turbulence of the airflow or particle deposition, or how the geometry of the lungs and its deformations upon breathing affect the overall gas exchange process in the normal patient or in the presence of diseases. 
+
+\approach
+
+Since the aim is to find correlations in which shape variations are involved, the idea is to employ the aforementioned Active Shape Models (ASMs) \citep{Cootes} for this task. To the best of my knowledge, ASMs have never been used to correlate lung shape and function. Furthermore, the reader is reminded that research on the {\em statistical analysis of tree-like shapes}, e.g., the airway tree, is still in its early stages \citep{Feragen2011,Feragen2012}, so there may be many opportunities for innovation is this case. This approach will benefit from the results obtained with the estimation of healthy arteries, described in Section \ref{sec:healthyvessels}, and vice-versa.
 

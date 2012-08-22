@@ -18,11 +18,12 @@ A large variety of stents is available in the market. However, choosing the corr
 
 In my PhD thesis, I showed that the choice of stents for the treatment of tracheal stenosis can be automated and simplified with the use of active shape models (ASM) \citep{Cootes}. The proposed method solves the problem of automatically determining the location of the stricture, its length, and the degree of narrowing by giving an estimation of the patient's healthy trachea, that is, if stenosis were not present. From this estimation, followed by a segmentation of the narrowed trachea, determining the parameters of the stenosis and consequently of the {\em patient-specific} stent becomes a straightforward task. 
 
-Many challenges exist when trying to use the ASMs of healthy shapes in the cardiovascular domain. First and foremost, to build the model, it is necessary to segment a large collection of healthy vascular trees and establish point-wise correspondences between them. The {\em automatic segmentation and labelling of the vascular tree} remains an open problem \citep{ORKI-08,Antiga,CARR-07,Scherl200721,Bemmel,Dikkers}. Furthermore, the {\em statistical analysis of tree-like shapes} is still in its early stages \citep{Feragen}. 
+Many challenges exist when trying to use the ASMs of healthy shapes in the cardiovascular domain. First and foremost, to build the model, it is necessary to segment a large collection of healthy vascular trees and establish point-wise correspondences between them. The {\em automatic segmentation and labelling of the vascular tree} remains an open problem \citep{ORKI-08,Antiga,CARR-07,Scherl200721,Bemmel,Dikkers}. Furthermore, the {\em statistical analysis of tree-like shapes} is still in its early stages \citep{Feragen2011,Feragen2012}. 
 
 Another challenge is that when optimizing the stent choice, several parameters need to be taken into account, such as the physical properties of the vessel wall and of the stents themselves and the estimation of the blood flow after deploying the stent. In cerebral aneurysms, other constraints with respect to scale and stent properties are further taken into account \citep{larrabide:2439,Larrabide2010,bogunovic:210,zhang:1294}, although the philophy is the same as in, e.g., coronary stents. To the best of my knowledge, such parameters have only been studied in post-stent-deployment scenarios or in simulations \citep{deBeule,Florez2,Gori,Vuk,FLOR-07b,Sforza}, but have never been integrated in an {\em automatic stent choice process}, especially one that is based on ASMs. 
 
-\subsection{Estimation of Healthy Vessels}
+\section{Estimation of Healthy Vessels}
+\label{sec:healthyvessels}
 
 \challenge
 When assessing vascular stenoses or aneurysms, physicians tend to pick healthy regions around the affected area in order to quantify the parameters of the deformation (extension, severity). These healthy regions in fact act as an estimation of the vessel if it were completely healthy. However, the simple selection of healthy sections may overlook shape characteristics, such as curvature, and vessels' physical properties, such as elasticity, malleability, and bending. The choice of the healthy vessel section is in fact a way to estimate the shape of the pathological region if the pathology were not present. In other words, physicians intuitively estimate how the vessel would appear if it were healthy. By doing this, they have a clearer image of the parameters of the deformation, which aids them in determining the stent dimensions and deployment location.
@@ -36,13 +37,13 @@ A natural extension of the work above is the application of the proposed 3D ASM 
 
 In this project, the method proposed for the trachea will be adapted and extended so that it can be used with narrowed and swelled vessels. In the first instance, a training set of healthy vessel sections will be built using segmentation methods available in the literature, for example \citep{Florez2}. In this way, the problem is reduced to modelling objects of tubular shape, without bifurcations, resembling the case of the trachea. Since healthy vessel sections tend to appear with good contrast in the images, their segmentation is in principle a relatively straightforward task. 
 
-The main difficulty lies in the segmentation of the vascular tree and the corresponding surface representation to be used in the statistical model. To the best of my knowledge, very little has been done in the field of {\em statistical shape models of tree-like structures} \citep{Feragen}. In the next phase of the project, existing surface representation methods \citep{Florez, Antiga} and the corresponding branch nomenclature will be employed so as to establish correspondences between the shapes of the statistical model's training set, which is an important step in the model construction. Existing ASM fitting algorithms will be extended to cope with the possible new difficulties when registering the model to deformed vessels. New fitting algorithms will also be developed to account for bifurcations. At this stage, only geometrical properties of the vessels will be taken into account. The inclusion of physical properties of vessels and stents in the model are discussed later in the text. 
+The main difficulty lies in the segmentation of the vascular tree and the corresponding surface representation to be used in the statistical model. To the best of my knowledge, very little has been done in the field of {\em statistical shape models of tree-like structures} \citep{Feragen2011,Feragen2012}. In the next phase of the project, existing surface representation methods \citep{Florez, Antiga} and the corresponding branch nomenclature will be employed so as to establish correspondences between the shapes of the statistical model's training set, which is an important step in the model construction. Existing ASM fitting algorithms will be extended to cope with the possible new difficulties when registering the model to deformed vessels. New fitting algorithms will also be developed to account for bifurcations. At this stage, only geometrical properties of the vessels will be taken into account. The inclusion of physical properties of vessels and stents in the model are discussed later in the text. 
 
-\subsection{Segmentation of the Vascular Tree}
+\section{Segmentation of the Vascular Tree}
 
 The segmentation of the vascular tree has been a topic of study for quite some time, but the automatic segmentation remains an open problem \citep{ORKI-08}. In the context of this project, the segmentation task is subdivided into two objectives: 1) the segmentation of healthy vascular trees; 2) segmentation of vessels with stenosis. Each is detailed in the following sections.
 
-\subsubsection{Healthy Vascular Trees}
+\subsection{Healthy Vascular Trees}
 
 \challenge
 
@@ -61,8 +62,8 @@ This segmentation problem has much in common with the segmentation of the airway
 
 The intention is to adapt and extend the referred method to the segmentation of healthy vessels and to compare it with other (semi-)automatic methods \citep{Zhou20121,CARR-07,FLOR-07b,Florez2,Scherl200721,Antiga,Bemmel}. In order to detect a seed point for the region growing algorithm, tube enhancement filters \citep{ORLO-09} may help in at least isolating the tubular structures in the image, from where the detection process may be triggered. 
 
-\subsubsection{Pathological Vessels}
-\label{sec:narrowedarteries}
+\subsection{Pathological Vessels}
+\label{sec:pathologicalvessels}
 
 \challenge
 Similarly to the case of tracheal stenoses, segmenting the narrowed vessels is an important step in the automatic calculation of the parameters of the vessel stricture. Previous experience with the segmentation of the trachea, however, has demonstrated that the segmentation of narrowed tube-like structures in medical images may be difficult \citep{Triglia,Pinho:Trachea7}. Region growing, for example, tends to fail to recover the correct tube wall if the narrowing is too severe and the lumen is not completely visible in the image. 
@@ -73,7 +74,7 @@ In \citep{Pinho:Trachea4}, an estimation of the patient's healthy trachea was us
 
 I will thus experiment with the referred deformable model in order to automatically segment narrowed vessels. The idea will still be to initialize the model with the estimation of the healthy vessel obtained with the ASM. This method should give better results then other solutions in the literature \citep{CARR-07,Florez2,Antiga,Bemmel}, but an in-depth comparison with those algorithms will be necessary.
 
-\subsection{Stent Choice}
+\section{Stent Choice}
 
 Physicians intuitively estimate the healthy shape of the narrowed vessel when quantifying the stenosis or the aneurysm. The solutions proposed above should be able to mimic the physician's work in a methodological and mathematical manner. After the estimation of the healthy vessel shape, we are ready to automatically detect the exact location of the stenosis and to quantify it. For this, it is necessary to track changes in the cross-sectional area of the narrowed tube relative to the estimated healthy tube \citep{Pinho:Trachea4} or relative to selected healthy vessel sections \citep{Florez2,Bemmel}.
 
@@ -81,7 +82,7 @@ Once the stenosis or aneurysm has been detected and quantified, the parameters o
 
 For this reason, I will add to the stent choice process several parameters derived from the physical properties of the vessel and of the stent itself. In addition, every predicted stent will be used in a blood flow simulation step such that its effectiveness can be further verified. From the simulations, other parameters will be extracted and added to the decision process. In this way, the proposed method will be turned into an optimization process on several variables. Some of them will impact the estimation of the vessel's healthy shape, some will impact the stent choice.
 
-\subsubsection{Extending the Statistical Shape Model}
+\subsection{Extending the Statistical Shape Model}
 
 \challenge
 The registration of the ASM of healthy vessels to an image of a patient with atherosclerosis is an iterative, edge-based search. At each iteration, the new locations of the landmarks that describe the surface of the vessel are determined and a least squares minimization process makes the shape generated by the ASM fit to the new point locations. Since the model is constrained by the (healthy) shape information contained in it, the resulting surface will resemble a healthy vessel.
@@ -93,7 +94,7 @@ I will then collect the physical properties of vessels available in the literatu
 
 In the same way, I will further extend the ASM with the physical properties of the stents. Since the ultimate objective of the project is the automatic prediction of patient-specific stent parameters, it is reasonable that their physical properties be an extra parameter in the construction of the model. Consequently, when registering the model to the patient's image, not only will the properties of the vessel play a role, but we will at the same time influence the estimation of the healthy vessel with the properties of the stent. The novelty here will be the combination of geometric (shape) and non-geometric information into a multi-dimensional ASM. 
 
-\subsubsection{Physically-based Segmentation of Pathological vessels}
+\subsection{Physically-based Segmentation of Pathological vessels}
 
 \challenge
 In the same way that the statistical shape model can be extended, so can be the segmentation of narrowed and swelled vessels. Originally, the snake model proposed in \citep{Kass} depends on internal and external energies to deform the surface towards the desired image feature. The internal energies take only elasticity and bending into account. 
@@ -101,7 +102,7 @@ In the same way that the statistical shape model can be extended, so can be the 
 \approach
 I will add extra energy terms taking into account vessels' physical properties \citep{BOUS-09c,ZAHN-11d}, in order to restrict (or improve) the surface deformations, so that the model can better adapt to the vessels' boundaries. Such physical properties must also take into account those of narrowed and swelled regions, since the main object of this segmentation step is to correctly segment them.
 
-\subsubsection{Simulations}
+\subsection{Simulations}
 
 \challenge
 As stated previously, when the estimated healthy vessel shape and the segmented narrowed vessel are obtained, the automatic detection and quantification of the stenosis or aneurysm tends to be trivial. The stent to be chosen, however, is the one that will optimize the blood flow after deployment. 
@@ -122,18 +123,18 @@ To achieve the integration of blood flow simulation with the stent choice, the p
 \label{fig:workflow}%
 \end{figure}
 
-\subsection{GPU Acceleration}
-
-\challenge
-In order to achieve the expected results with the proposed methods, a lot of computational power may be necessary. The blood simulations, for instance, are very computation intensive (e.g., 48 hours running on a 200-CPU cluster \citep{deBeule}). The proposed optimization process, as well, is a classic case study for the use of clusters and grids, given the number of potential variables in the problem. I envision the use of such architectures, but bringing them to the clinic is impractical and expensive. A more viable, yet powerful, solution is thus necessary.
-
-The FASTRA\footnote{http://fastra.ua.ac.be/en/index.html} technology is a successful attempt of building a desktop supercomputer using multiple GPUs. At the cost of a couple of high-end desktop computers, this technology yields computing power comparable to more than 256 CPUs working together, with proper GPU programming.
-
-In GPU programming, however, the size of the data to process may be larger than the available GPU memory. In this case, we need to be selective about which parts of the data should be transferred to the GPU memory at each time. In this project, it is possible that the areas of interest in the image, that is, those with the vessels under study, occupy a small part of the image. Careful identification of this part of the image could minimize data transfers between RAM and GPU. 
-
-\approach
-In \citep{Pinho:Cache1}, a similar problem was dealt with, but in a different scale. Since image processing pipelines may require several simultaneous copies of the image buffer, current available RAMs may not be large enough. An out-of-core solution for image processing based on sliding window cache and pre-fetching techniques was then proposed. In other words, only the parts of the image that are necessary in a given moment reside in main memory. The other parts remain in disk. Using a-priori knowledge about the image traversal pattern of image processing algorithms, it is possible to predict which regions of the image will be needed in the future. These images can be asynchronously fetched from disk and stored in a cache before being requested by the algorithm. If the I/O operation is fast enough, it is very likely that the algorithm will not have to wait for the request complete. 
-
-The method above can similarly be applied in the selection of what data to bring to the GPU. I will then analyse the image traversal patterns of the algorithms developed in this project and develop new cache and pre-fetching strategies for the GPU vs. RAM architecture. In this way, the stent choice optimization can potentially be made in the clinic without the need of the cluster structure.
+% \section{GPU Acceleration}
+% 
+% \challenge
+% In order to achieve the expected results with the proposed methods, a lot of computational power may be necessary. The blood simulations, for instance, are very computation intensive (e.g., 48 hours running on a 200-CPU cluster \citep{deBeule}). The proposed optimization process, as well, is a classic case study for the use of clusters and grids, given the number of potential variables in the problem. I envision the use of such architectures, but bringing them to the clinic is impractical and expensive. A more viable, yet powerful, solution is thus necessary.
+% 
+% The FASTRA\footnote{http://fastra.ua.ac.be/en/index.html} technology is a successful attempt of building a desktop supercomputer using multiple GPUs. At the cost of a couple of high-end desktop computers, this technology yields computing power comparable to more than 256 CPUs working together, with proper GPU programming.
+% 
+% In GPU programming, however, the size of the data to process may be larger than the available GPU memory. In this case, we need to be selective about which parts of the data should be transferred to the GPU memory at each time. In this project, it is possible that the areas of interest in the image, that is, those with the vessels under study, occupy a small part of the image. Careful identification of this part of the image could minimize data transfers between RAM and GPU. 
+% 
+% \approach
+% In \citep{Pinho:Cache1}, a similar problem was dealt with, but in a different scale. Since image processing pipelines may require several simultaneous copies of the image buffer, current available RAMs may not be large enough. An out-of-core solution for image processing based on sliding window cache and pre-fetching techniques was then proposed. In other words, only the parts of the image that are necessary in a given moment reside in main memory. The other parts remain in disk. Using a-priori knowledge about the image traversal pattern of image processing algorithms, it is possible to predict which regions of the image will be needed in the future. These images can be asynchronously fetched from disk and stored in a cache before being requested by the algorithm. If the I/O operation is fast enough, it is very likely that the algorithm will not have to wait for the request complete. 
+% 
+% The method above can similarly be applied in the selection of what data to bring to the GPU. I will then analyse the image traversal patterns of the algorithms developed in this project and develop new cache and pre-fetching strategies for the GPU vs. RAM architecture. In this way, the stent choice optimization can potentially be made in the clinic without the need of the cluster structure.
 
 
