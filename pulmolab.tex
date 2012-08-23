@@ -10,16 +10,26 @@ Part II: The PulmoLab
 
 \section[Context]{Context}
 
+With the advent of modern medical imaging and the explosion in computing power, it is now possible to derive models that replicate the important geometric features of individual lungs, and to simulate function within these geometric models
+
+The need for a quantitative understanding of in vivo lung function leads to the need for reliable model representation of the in vivo lung structure. The lung primarily comprises parenchymal (gas exchange) tissue, airways, arteries, and veins. The treelike structures of the airways and blood vessels are intimately bound to—and suspended within—the parenchyma (alveolar tissue). Symmetric,15 regular asymmetric,16 and fractal17,18 models of the airways and blood vessels have been used widely in modeling studies (e.g., Refs. 17–22, to name but a few). However, function in the lung is strongly influenced by the spatial positioning of the airways and vessels, and these convenient model simplifications do not provide such information. For
+
+Models of pulmonary function necessarily span multiple spatial and temporal scales (multiscale models). Dynamic molecular interactions give rise to whole-organ function, and the link between these scales cannot be fully understood if only molecular or organ-level function is considered. An
+
+An appropriate multiscale model will capture the important features of function at each spatial or temporal scale while maintaining as much computational simplicity as possible. Physical forces acting on the surface of the intact lung are transmitted to the level of the gas exchange tissue (where they hold open the small airways and blood vessels) and on down to the level of cells and molecules where stress modulates local function.
+
+
+Here, we review progress in constructing multiscale finite element models of lung structure and function that are aimed at providing a computational framework for bridging the spatial scales from molecular to whole organ. These include structural models of the intact lung, embedded models of the pulmonary airways that couple to model lung tissue, and models of the pulmonary vasculature that account for distinct structural differences at the extra- and intra-acinar levels. Biophysically based functional models for tissue deformation, pulmonary blood flow, and airway bronchoconstriction are also described. The development of these advanced multiscale models has led to a better understanding of complex physiological mechanisms that govern regional lung perfusion and emergent heterogeneity during bronchoconstriction
+
 In \citep{TawhaiM2011}
 
-The main interest here is thus to extend the work developed by the HeMoLab group in the context of the MACC project \citep{Blanco2012,Blanco2010,Blanco2009a,Blanco2007,Golbert2012,Malossi2011,Urquiza2006}, adding to it the modelling of the gas exchange process. Below are the main challenges involved in this process and the propose approaches to solve them.
+The main interest here is thus to extend the work developed by the HeMoLab group in the context of the MACC project \citep{Blanco2012,Blanco2010,Blanco2009a,Blanco2007,Golbert2012,Malossi2011,Urquiza2006}, adding to it the modelling of the gas exchange process. Below are the main challenges involved in this process and the proposed approaches to solve them.
 
 \section{Segmentation of the Airway Tree}
 
 \challenge
 
-The segmentation of the airway tree has been a topic of study for quite some time, but the automatic segmentation remains an open problem. Achieving correct manual (or semi-automatic) segmentation can be painstaking, non-reproducible, and prone to error. Still, state-of-art automatic algorithms still fall short of achieving the same results obtained with manual interventions \citep{Lo}. The complexity lies in the little image resolution at the lower levels of the airway tree. Noise and other artefacts such as partial volume effect makes the automatic identification of smaller branches
-even more difficult.
+It has been shown that CFD simulations of airflow are largely improved when patient-specific image based models of the airways are employed \citep{Tawhai2010,Vial2005}. In effect, the segmentation of the airway tree has been a topic of study for quite some time, but the automatic segmentation remains an open problem. Achieving correct manual (or semi-automatic) segmentation can be painstaking, non-reproducible, and prone to error. Yet, state-of-art, fully automatic algorithms still fall short of achieving the same results obtained with manual interventions \citep{Lo}. The complexity lies in the little image resolution at the lower levels of the airway tree. Noise and other artefacts such as partial volume effect make the automatic identification of smaller branches even more difficult.
 
 \approach
 
@@ -31,7 +41,11 @@ The intention is to further extend the referred method and try to incorporate ne
 
 \challenge
 
+Constructing anatomically based functional models of the pulmonary vasculature that are representative of the important structural features of the pulmonary circulation while remaining computationally tractable is a considerable task. Each of the bronchial airways of the human lung is “accompanied” by an arterial vessel, but there are many more pulmonary arteries than there are branches in the bronchial airway tree,56 and the same is true for the venous system. These additional blood vessels have been termed “supernumerary” vessels. The bifurcating system of accompanying and supernumerary vessels extends to the level of the pulmonary capillaries, transporting blood to the gas exchange surface. Within the pulmonary acini, which are generally defined to be the functional gas exchange units of the lung, small arteries, and veins are connected by capillary sheets that cover the alveoli arising at multiple levels throughout the structure. The extra-acinar and intra-acinar vessels therefore have distinct geometric structures that give rise to scale-specific function, i.e., the preacinar vessels of the human lung branch dichotomously (with the exception of the supernumerary vessels described below) and hence supply blood to the gas exchange units in a parallel arrangement, and the intra-acinar vascular structure results in combined series and parallel perfusion. Approaches to modeling the distinct geometry and characteristics of blood flow within these regions are considered here.
+
+
 In \citep{Dongen,Ebrahimdoost,Gutierrez,Linguraru,Shikata,Wala}
+
 
 \approach
 
