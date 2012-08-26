@@ -10,19 +10,13 @@ Part II: The PulmoLab
 
 \section[Context]{Context}
 
-The need for a quantitative understanding of in vivo lung function leads to the need for reliable model representation of the in vivo lung structure. The lung primarily comprises parenchymal (gas exchange) tissue, airways, arteries, and veins. The treelike structures of the airways and blood vessels are intimately bound to—and suspended within—the parenchyma (alveolar tissue). Function in the lung is strongly influenced by the spatial positioning of the airways and vessels \citep{TawhaiM2011,Tawhai2010}, calling for a patient-specif approach in simulating and analysing lung structure and function. 
+The need for a quantitative understanding of in vivo lung function leads to the need for reliable model representation of the in vivo lung structure. The lung primarily comprises parenchymal (gas exchange) tissue, airways, arteries, and veins. The treelike structures of the airways and blood vessels are intimately bound to—and suspended within—the parenchyma (alveolar tissue). Function in the lung is strongly influenced by the spatial positioning of the airways and vessels \citep{TawhaiM2011,Tawhai2010}, calling for a patient-specific approach in simulating and analysing lung structure and function. 
 
 With advances in modern medical imaging and the steady and rapid increase in computing power, it is now possible to derive models that replicate the many geometric features of individual lungs, and to simulate function within these geometric models, taking into account their different spatial and time scales \citep{Tawhai2010,Tawhai2000,Tawhai08,Burrowes2005}.
 
-A number of international projects have put together groups interested in the modelling and simulation of lung function, among them the Human Lung Atlas \citep{Hoffman2004,Li2003}, the Lung Physiome \citep{TawhaiM2011}, and the AIRPROM-VPHNoE\footnote{http://cordis.europa.eu/projects/rcn/97980_en.html}. In Brazil, to the best of my knowledge, such an effort has not yet been started. However, human physiological modelling and simulation has been a topic of interest of the HeMoLab group 
+A number of international projects have put together groups interested in the modelling and simulation of lung function, among them the Human Lung Atlas \citep{Hoffman2004,Li2003}, the Lung Physiome \citep{TawhaiM2011}, and the AIRPROM-VPHNoE\footnote{http://cordis.europa.eu/projects/rcn/97980\_en.html}. In Brazil, to the best of my knowledge, such an effort has not yet been started. However, patient-specific modelling and simulation of the human cardiovascular system has been a topic of interest of the HeMoLab group of the LNCC since 2005, and also part of the nation-wide project MACC. 
 
-
-
-Here, we review progress in constructing multiscale finite element models of lung structure and function that are aimed at providing a computational framework for bridging the spatial scales from molecular to whole organ. These include structural models of the intact lung, embedded models of the pulmonary airways that couple to model lung tissue, and models of the pulmonary vasculature that account for distinct structural differences at the extra- and intra-acinar levels. Biophysically based functional models for tissue deformation, pulmonary blood flow, and airway bronchoconstriction are also described. The development of these advanced multiscale models has led to a better understanding of complex physiological mechanisms that govern regional lung perfusion and emergent heterogeneity during bronchoconstriction
-
-In \citep{TawhaiM2011}
-
-The main interest here is thus to extend the work developed by the HeMoLab group in the context of the MACC project \citep{Blanco2012,Blanco2010,Blanco2009a,Blanco2007,Golbert2012,Malossi2011,Urquiza2006}, adding to it the modelling of the gas exchange process. The primary objective is to investigate the existing literature on the subject, find the common points with the work developed in the HeMoLab, and carry out the integration between the existing models of vascular system and the new models of gas exchange. Some challenges in this process are rather clear, which are show below along with the approaches to solve them. 
+Computational modelling and simulation of the cardiovascular system is fundamentally similar to modelling and simulation the physiology of the lungs and the gas exchange process. The main interest of this part of the proposed project is thus to extend the work developed by the HeMoLab group in the context of the MACC project \citep{Blanco2012,Blanco2010,Blanco2009a,Blanco2007,Golbert2012,Malossi2011,Urquiza2006}, adding to it the modelling of the gas exchange process. The primary objective is to investigate the existing literature on the subject, find the common points with the work developed in the HeMoLab, and carry out the integration between the existing models of vascular system and the new models of gas exchange. Some challenges in this process are rather clear, which are show below along with the approaches to solve them. 
 
 \section{Segmentation of the Airway Tree}
 
@@ -47,15 +41,19 @@ The vessels that compose the pulmanary vascular tree have a many-to-one relation
 In theroy, the algorithms proposed for the segmentation of the airways can be employed in the segmentation of pulmonary vascular tree, for the two trees have, overall, the same strucutre \citep{TawhaiM2011}. Therefore, we will investigate the use of the algorithms described in \citep{Lo}, for the airways, and also those proposed exclusively for the segmentation of the vascular tree, such as \citep{Dongen,Ebrahimdoost,Gutierrez,Linguraru,Shikata,Wala}.
 
 
-\section{Airflow and Gas Exchange Simulations}
+\section{Patient-specific Airflow and Gas Exchange Simulations}
 
 \challenge
 
-An appropriate multiscale model will capture the important features of function at each spatial or temporal scale while maintaining as much computational simplicity as possible. Physical forces acting on the surface of the intact lung are transmitted to the level of the gas exchange tissue (where they hold open the small airways and blood vessels) and on down to the level of cells and molecules where stress modulates local function.
+An appropriate multiscale model will capture the important features of function at each spatial or temporal scale while maintaining as much computational simplicity as possible. Physical forces acting on the surface of the intact lung are transmitted to the level of the gas exchange tissue (where they hold open the small airways and blood vessels) and on down to the level of cells and molecules where stress modulates local function. Conversely, chemical reactions at the molecular level eventually trigger changes in the shape of the lungs and of the airways to, for example, increase or decrease breathing speed.
+
+Correct, patient-specific modelling and simulation of the gas exchange process depends ....
 
 On the one hand, this is probably the most challenging part of the PulMoLab proposal. On the other hand, it is also the one that tends to benefit the most from the expertise of the MACC/HeMoLab/LNCC in the modelling and simulations of the human vascular system. 
 
 \approach
+
+The main objective in this part of the project is to study the work about modelling and simulations of gas exchange available in the recent literature, for example \citep{TawhaiM2011,Tawhai2010,Tawhai08,Burrowes2005,Lin2009,Werner2009,DeBacker2008,DeBacker2010,Gemci2007}. At the same time, it will be necessary to get fully acquainted with the work developed at the HeMoLab group about the cardiovascular system, most notably \citep{Blanco2007,Blanco2009a,Blanco2010,Blanco2012,Urquiza2006}. The next step will be to find opportunities for innovation so as to carry out the proposed extension of the work developed at the MeMoLab.
 
 \section{Correlations Between Pulmonary Structure and Function}
 
