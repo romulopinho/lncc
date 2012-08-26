@@ -72,7 +72,7 @@ Similarly to the case of tracheal stenoses, segmenting the narrowed vessels is a
 
 In \citep{Pinho:Trachea4}, an estimation of the patient's healthy trachea was used as initialization of a deformable model to segment the narrowed tube. The proposed deformable model, based on the snake model proposed by \citep{Kass}, was able to correctly segment the tracheal wall even in the more difficult cases. 
 
-I will thus experiment with the referred deformable model in order to automatically segment narrowed vessels. The idea will still be to initialize the model with the estimation of the healthy vessel obtained with the ASM. This method should give better results then other solutions in the literature \citep{CARR-07,Florez2,Antiga,Bemmel}, but an in-depth comparison with those algorithms will be necessary.
+We will thus experiment with the referred deformable model in order to automatically segment narrowed vessels. The idea will still be to initialize the model with the estimation of the healthy vessel obtained with the ASM. This method should give better results then other solutions in the literature \citep{CARR-07,Florez2,Antiga,Bemmel}, but an in-depth comparison with those algorithms will be necessary.
 
 \section{Stent Choice}
 
@@ -80,7 +80,7 @@ Physicians intuitively estimate the healthy shape of the narrowed vessel when qu
 
 Once the stenosis or aneurysm has been detected and quantified, the parameters of the stent are trivially obtained. At this point, the whole chain of the proposed project will be finished. However, the effectiveness of the predicted stent can only be verified after it has been deployed in the patient's vessel. If the stent is inadequate, it may migrate to another location or strain the vessel wall. 
 
-For this reason, I will add to the stent choice process several parameters derived from the physical properties of the vessel and of the stent itself. In addition, every predicted stent will be used in a blood flow simulation step such that its effectiveness can be further verified. From the simulations, other parameters will be extracted and added to the decision process. In this way, the proposed method will be turned into an optimization process on several variables. Some of them will impact the estimation of the vessel's healthy shape, some will impact the stent choice.
+For this reason, we will add to the stent choice process several parameters derived from the physical properties of the vessel and of the stent itself. In addition, every predicted stent will be used in a blood flow simulation step such that its effectiveness can be further verified. From the simulations, other parameters will be extracted and added to the decision process. In this way, the proposed method will be turned into an optimization process on several variables. Some of them will impact the estimation of the vessel's healthy shape, some will impact the stent choice.
 
 \subsection{Extending the Statistical Shape Model}
 
@@ -90,9 +90,9 @@ The registration of the ASM of healthy vessels to an image of a patient with ath
 A ``healthy vessel'' in this context means that only the geometrical variation about the vessels is captured by the statistical model. Still, vessels have physical properties such as elasticity, malleability, and bending, that are not explicitly encoded in the model. At the best, the geometric information may implicitly contain some aspects of the referred properties. 
 
 \approach
-I will then collect the physical properties of vessels available in the literature \citep{ZAHN-11d,BOUS-09c,BOUS-08c,SULA-08a,Oubel,zhang:1294,Balocco} in order to add such information to the 3D ASM. As a result, when registering the model to the patient's image these properties will further constrain the deformation, which should help in obtaining a better estimation of the healthy vessel shape. 
+We will then collect the physical properties of vessels available in the literature \citep{ZAHN-11d,BOUS-09c,BOUS-08c,SULA-08a,Oubel,zhang:1294,Balocco} in order to add such information to the 3D ASM. As a result, when registering the model to the patient's image these properties will further constrain the deformation, which should help in obtaining a better estimation of the healthy vessel shape. 
 
-In the same way, I will further extend the ASM with the physical properties of the stents. Since the ultimate objective of the project is the automatic prediction of patient-specific stent parameters, it is reasonable that their physical properties be an extra parameter in the construction of the model. Consequently, when registering the model to the patient's image, not only will the properties of the vessel play a role, but we will at the same time influence the estimation of the healthy vessel with the properties of the stent. The novelty here will be the combination of geometric (shape) and non-geometric information into a multi-dimensional ASM. 
+In the same way, we will further extend the ASM with the physical properties of the stents. Since the ultimate objective of the project is the automatic prediction of patient-specific stent parameters, it is reasonable that their physical properties be an extra parameter in the construction of the model. Consequently, when registering the model to the patient's image, not only will the properties of the vessel play a role, but we will at the same time influence the estimation of the healthy vessel with the properties of the stent. The novelty here will be the combination of geometric (shape) and non-geometric information into a multi-dimensional ASM. 
 
 \subsection{Physically-based Segmentation of Pathological vessels}
 
@@ -100,7 +100,7 @@ In the same way, I will further extend the ASM with the physical properties of t
 In the same way that the statistical shape model can be extended, so can be the segmentation of narrowed and swelled vessels. Originally, the snake model proposed in \citep{Kass} depends on internal and external energies to deform the surface towards the desired image feature. The internal energies take only elasticity and bending into account. 
 
 \approach
-I will add extra energy terms taking into account vessels' physical properties \citep{BOUS-09c,ZAHN-11d}, in order to restrict (or improve) the surface deformations, so that the model can better adapt to the vessels' boundaries. Such physical properties must also take into account those of narrowed and swelled regions, since the main object of this segmentation step is to correctly segment them.
+We will add extra energy terms taking into account vessels' physical properties \citep{BOUS-09c,ZAHN-11d}, in order to restrict (or improve) the surface deformations, so that the model can better adapt to the vessels' boundaries. Such physical properties must also take into account those of narrowed and swelled regions, since the main object of this segmentation step is to correctly segment them.
 
 \subsection{Simulations}
 
@@ -126,7 +126,7 @@ To achieve the integration of blood flow simulation with the stent choice, the p
 % \section{GPU Acceleration}
 % 
 % \challenge
-% In order to achieve the expected results with the proposed methods, a lot of computational power may be necessary. The blood simulations, for instance, are very computation intensive (e.g., 48 hours running on a 200-CPU cluster \citep{deBeule}). The proposed optimization process, as well, is a classic case study for the use of clusters and grids, given the number of potential variables in the problem. I envision the use of such architectures, but bringing them to the clinic is impractical and expensive. A more viable, yet powerful, solution is thus necessary.
+% In order to achieve the expected results with the proposed methods, a lot of computational power may be necessary. The blood simulations, for instance, are very computation intensive (e.g., 48 hours running on a 200-CPU cluster \citep{deBeule}). The proposed optimization process, as well, is a classic case study for the use of clusters and grids, given the number of potential variables in the problem. we envision the use of such architectures, but bringing them to the clinic is impractical and expensive. A more viable, yet powerful, solution is thus necessary.
 % 
 % The FASTRA\footnote{http://fastra.ua.ac.be/en/index.html} technology is a successful attempt of building a desktop supercomputer using multiple GPUs. At the cost of a couple of high-end desktop computers, this technology yields computing power comparable to more than 256 CPUs working together, with proper GPU programming.
 % 
@@ -135,6 +135,6 @@ To achieve the integration of blood flow simulation with the stent choice, the p
 % \approach
 % In \citep{Pinho:Cache1}, a similar problem was dealt with, but in a different scale. Since image processing pipelines may require several simultaneous copies of the image buffer, current available RAMs may not be large enough. An out-of-core solution for image processing based on sliding window cache and pre-fetching techniques was then proposed. In other words, only the parts of the image that are necessary in a given moment reside in main memory. The other parts remain in disk. Using a-priori knowledge about the image traversal pattern of image processing algorithms, it is possible to predict which regions of the image will be needed in the future. These images can be asynchronously fetched from disk and stored in a cache before being requested by the algorithm. If the I/O operation is fast enough, it is very likely that the algorithm will not have to wait for the request complete. 
 % 
-% The method above can similarly be applied in the selection of what data to bring to the GPU. I will then analyse the image traversal patterns of the algorithms developed in this project and develop new cache and pre-fetching strategies for the GPU vs. RAM architecture. In this way, the stent choice optimization can potentially be made in the clinic without the need of the cluster structure.
+% The method above can similarly be applied in the selection of what data to bring to the GPU. we will then analyse the image traversal patterns of the algorithms developed in this project and develop new cache and pre-fetching strategies for the GPU vs. RAM architecture. In this way, the stent choice optimization can potentially be made in the clinic without the need of the cluster structure.
 
 
