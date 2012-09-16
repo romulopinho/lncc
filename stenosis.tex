@@ -16,7 +16,7 @@ Concomitantly, the use of images plays a very important role in the diagnosis, t
 
 A large variety of stents is available in the market. However, choosing the correct stent parameters (type, length, diameter, and deployment location) for either aneurysms or stenoses is challenging and remains a specialist-dependent and subjective task, which is mostly based on the expertise of the physician in charge. This problem attracts large attention. The multi-centre, EU-project THROMBUS\footnote{http://www.thrombus-vph.eu/}, for instance, is an attempt to understand the formation of thrombosis in cerebral aneurysms after stent implants, in order to improve stent design, choice, and deployment. An event to compare the results of existing algorithms to aid in the detection and quantification of coronary stenoses has also recently been organized\footnote{http://coronary.bigr.nl/stenoses}.
 
-In my PhD thesis, I showed that the choice of stents for the treatment of tracheal stenosis can be automated and simplified with the use of active shape models (ASM) \citep{Cootes}. The proposed method solves the problem of automatically determining the location of the stricture, its length, and the degree of narrowing by giving an estimation of the patient's healthy trachea, that is, if stenosis were not present. From this estimation, followed by a segmentation of the narrowed trachea, determining the parameters of the stenosis and consequently of the {\em patient-specific} stent becomes a straightforward task. 
+In \citep{Pinho:Trachea4,Pinho:Thesis}, it was shown that the choice of stents for the treatment of tracheal stenosis can be automated and simplified with the use of active shape models (ASM) \citep{Cootes}. The proposed method solves the problem of automatically determining the location of the stricture, its length, and the degree of narrowing by giving an estimation of the patient's healthy trachea, that is, if stenosis were not present. From this estimation, followed by a segmentation of the narrowed trachea, determining the parameters of the stenosis and consequently of the {\em patient-specific} stent becomes a straightforward task. 
 
 Many challenges exist when trying to use the ASMs of healthy shapes in the cardiovascular domain. First and foremost, to build the model, it is necessary to segment a large collection of healthy vascular trees and establish point-wise correspondences between them. The {\em automatic segmentation and labelling of the vascular tree} remains an open problem \citep{ORKI-08,Antiga,CARR-07,Scherl200721,Bemmel,Dikkers}. Furthermore, the {\em statistical analysis of tree-like shapes} is still in its early stages \citep{Feragen2011,Feragen2012}. 
 
@@ -114,14 +114,15 @@ In \citep{Florez,deBeule}, methods were proposed for stent deployment simulation
 
 The idea is then to methodologically quantify these parameters, by using the stents' and vessels' physical properties, and to have measures for, e.g., vessel wall straining, stenosis/aneurysm coverage, stent deformation, etc. \citep{BOUS-09c,BOUS-08c,SULA-08a}. These parameters can be further added to the ASM so as to improve the healthy shape estimation. Consequently, the ASM registration will tend to yield a shape with the best characteristics in terms of the stent vs. wall interaction as well.
 
-To achieve the integration of blood flow simulation with the stent choice, the plan is to define a function of the blood flow subject to the stent parameters (physical properties, deployment location, length, and diameter). This function will then be maximized, such that the chosen stent is the optimal one for a certain patient. This optimization process will thus influence the entire workflow, from the estimation of the healthy vessel shape, passing through the segmentation of the narrowed/swelled vessel, to the detection and quantification of the stenosis/aneurysm, and the final prediction of the stent parameters. In fact, we imagine an algorithm that implements the workflow depicted in Figure \ref{fig:workflow}. 
+To achieve the integration of blood flow simulation with the stent choice, the plan is to define a function of the blood flow subject to the stent parameters (physical properties, deployment location, length, and diameter). This function will then be maximized, such that the chosen stent is the optimal one for a certain patient. This optimization process will thus influence the entire workflow, from the estimation of the healthy vessel shape, passing through the segmentation of the narrowed/swelled vessel, to the detection and quantification of the stenosis/aneurysm, and the final prediction of the stent parameters. 
+% In fact, we imagine an algorithm that implements the workflow depicted in Figure \ref{fig:workflow}. 
 
-\begin{figure}%
-\centering
-\includegraphics[width=0.8\columnwidth]{workflow.png}%
-\caption{Workflow of the complete automatic stent prediction process.}%
-\label{fig:workflow}%
-\end{figure}
+% \begin{figure}%
+% \centering
+% \includegraphics[width=0.8\columnwidth]{workflow.png}%
+% \caption{Workflow of the complete automatic stent prediction process.}%
+% \label{fig:workflow}%
+% \end{figure}
 
 % \section{GPU Acceleration}
 % 
