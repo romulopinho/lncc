@@ -37,7 +37,8 @@ A natural extension of the work above is the application of the proposed 3D ASM 
 
 In this project, the method proposed for the trachea will be adapted and extended so that it can be used with narrowed and swelled vessels. In the first instance, a training set of healthy vessel sections will be built using segmentation methods available in the literature, for example \citep{Florez2}. In this way, the problem is reduced to modelling objects of tubular shape, without bifurcations, resembling the case of the trachea. Since healthy vessel sections tend to appear with good contrast in the images, their segmentation is in principle a relatively straightforward task. 
 
-The main difficulty lies in the segmentation of the vascular tree and the corresponding surface representation to be used in the statistical model. To the best of the author's knowledge, very little has been done in the field of {\em statistical shape models of tree-like structures} \citep{Feragen2011,Feragen2012}. In the next phase of the project, existing surface representation methods \citep{Florez, Antiga} and the corresponding branch nomenclature will be employed so as to establish correspondences between the shapes of the statistical model's training set, which is an important step in the model construction. Existing ASM fitting algorithms will be extended to cope with the possible new difficulties when registering the model to deformed vessels. New fitting algorithms will also be developed to account for bifurcations. At this stage, only geometrical properties of the vessels will be taken into account. The inclusion of physical properties of vessels and stents in the model are discussed later in the text. 
+The main difficulty lies in the segmentation of the vascular tree and the corresponding surface representation to be used in the statistical model. To the best of the author's knowledge, very little has been done in the field of {\em statistical shape models of tree-like structures} \citep{Feragen2011,Feragen2012}. In the next phase of the project, existing surface representation methods \citep{Florez, Antiga} and the corresponding branch nomenclature will be employed so as to establish correspondences between the shapes of the statistical model's training set, which is an important step in the model construction. Existing ASM fitting algorithms will be extended to cope with the possible new difficulties when registering the model to deformed vessels. New fitting algorithms will also be developed to account for bifurcations. At this stage, only geometrical properties of the vessels will be taken into account. The inclusion of physical properties of vessels and stents in the model are discussed later in the 
+text. 
 
 \section{Segmentation of the Vascular Tree}
 
@@ -51,8 +52,10 @@ ASMs depend on the selection of a large set of training shapes, whose geometrica
 
 \approach
 
-This segmentation problem has much in common with the segmentation of the airway tree. Despite also being an open problem, automatic segmentation algorithms for the airways exist and were even been evaluated in a recent segmentation challenge\footnote{http://image.diku.dk/exact/}. One of these algorithms \citep{Pinho:Airways2} implements an iterative region growing with adaptive, cylindrical ROIs that employs anatomical information in the detection and elimination of leaks, a common problem in region growing. The method also includes an initialization step to automatically detect the starting point of the trachea, which is given as a seed point to the region growing algorithm. 
+\begin{sloppypar}
 
+This segmentation problem has much in common with the segmentation of the airway tree. Despite also being an open problem, automatic segmentation algorithms for the airways exist and were even been evaluated in a recent segmentation challenge\footnote{http://image.diku.dk/exact/}. One of these algorithms \citep{Pinho:Airways2} implements an iterative region growing with adaptive, cylindrical ROIs that employs anatomical information in the detection and elimination of leaks, a common problem in region growing. The method also includes an initialization step to automatically detect the starting point of the trachea, which is given as a seed point to the region growing algorithm. 
+\end{sloppypar}
 %\begin{figure}%
 %\centering
 %\includegraphics[width=0.5\columnwidth]{research_interests_airways.jpg}%
@@ -60,7 +63,9 @@ This segmentation problem has much in common with the segmentation of the airway
 %\label{fig:airways}%
 %\end{figure}
 
+\begin{sloppypar}
 The intention is to adapt and extend the referred method to the segmentation of healthy vessels and to compare it with other (semi-)automatic methods \citep{Zhou20121,CARR-07,FLOR-07b,Florez2,Scherl200721,Antiga,Bemmel}. In order to detect a seed point for the region growing algorithm, tube enhancement filters \citep{ORLO-09} may help in at least isolating the tubular structures in the image, from where the detection process may be triggered. 
+\end{sloppypar}
 
 \subsection{Pathological Vessels}
 \label{sec:pathologicalvessels}
@@ -72,7 +77,9 @@ Similarly to the case of tracheal stenoses, segmenting the narrowed vessels is a
 
 In \citep{Pinho:Trachea4}, an estimation of the patient's healthy trachea was used as initialization of a deformable model to segment the narrowed tube. The proposed deformable model, based on the snake model proposed by \citep{Kass}, was able to correctly segment the tracheal wall even in the more difficult cases. 
 
+\begin{sloppypar}
 We will thus experiment with the referred deformable model in order to automatically segment narrowed vessels. The idea will still be to initialize the model with the estimation of the healthy vessel obtained with the ASM. This method should give better results then other solutions in the literature \citep{CARR-07,Florez2,Antiga,Bemmel}, but an in-depth comparison with those algorithms will be necessary.
+\end{sloppypar}
 
 \section{Stent Choice}
 
@@ -112,7 +119,9 @@ Blood flow simulations already play an important role in stent design and placem
 \approach
 In \citep{Florez,deBeule}, methods were proposed for stent deployment simulations using deformable models and numerical methods. With these methods, it is possible to (visually) verify whether the predicted stent properly expands the narrowed region of the vessel or whether it correctly bypasses the swelled region. 
 
+\begin{sloppypar}
 The idea is then to methodologically quantify these parameters, by using the stents' and vessels' physical properties, and to have measures for, e.g., vessel wall straining, stenosis/aneurysm coverage, stent deformation, etc. \citep{BOUS-09c,BOUS-08c,SULA-08a}. These parameters can be further added to the ASM so as to improve the healthy shape estimation. Consequently, the ASM registration will tend to yield a shape with the best characteristics in terms of the stent vs. wall interaction as well.
+\end{sloppypar}
 
 To achieve the integration of blood flow simulation with the stent choice, the plan is to define a function of the blood flow subject to the stent parameters (physical properties, deployment location, length, and diameter). This function will then be maximized, such that the chosen stent is the optimal one for a certain patient. This optimization process will thus influence the entire workflow, from the estimation of the healthy vessel shape, passing through the segmentation of the narrowed/swelled vessel, to the detection and quantification of the stenosis/aneurysm, and the final prediction of the stent parameters. 
 % In fact, we imagine an algorithm that implements the workflow depicted in Figure \ref{fig:workflow}. 

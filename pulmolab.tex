@@ -16,17 +16,24 @@ With advances in modern medical imaging and the steady and rapid increase in com
 
 A number of international projects have put together groups interested in the modelling and simulation of lung function, among them the Human Lung Atlas \citep{Hoffman2004,Li2003}, the Lung Physiome \citep{TawhaiM2011}, and the AIRPROM-VPHNoE\footnote{http://cordis.europa.eu/projects/rcn/97980\_en.html}. In Brazil, to the best of my knowledge, such an effort has not yet been started. However, patient-specific modelling and simulation of the human cardiovascular system, including gas transport and metabolism \citep{Trenhago2012}, has been a topic of interest of the HeMoLab group of the LNCC since 2005, and also part of the nation-wide project INCT-MACC. 
 
+
+\begin{sloppypar}
 Computational modelling and simulation of the cardiovascular system is fundamentally similar to modelling and simulation of the physiology of the lungs and the gas exchange process. The main interest of this part of the proposed project is thus to extend the work developed by the HeMoLab group in the context of the INCT-MACC project \citep{Blanco2012,Blanco2010,Blanco2009a,Blanco2007,Golbert2012,Malossi2011,Urquiza2006,Larrabide2007}, adding to it the modelling of the gas exchange process. The primary objective is to investigate the existing literature on the subject, find the common points with the work developed in the HeMoLab, and carry out the integration between the existing models of vascular system and the new models of gas exchange. Some challenges in this process are rather clear, which are shown below along with the approaches to solve them. 
+\end{sloppypar}
 
 \section{Segmentation of the Airway Tree}
 
 \challenge
 
+\begin{sloppypar}
 It has been shown that CFD simulations of airflow are largely improved when patient-specific image based models of the airways are employed \citep{Tawhai2010,Vial2005}. In effect, the segmentation of the airway tree has been a topic of study for quite some time, but the automatic segmentation remains an open problem. Achieving correct manual (or semi-automatic) segmentation can be painstaking, non-reproducible, and prone to error. Yet, state-of-art, fully automatic algorithms still fall short of achieving the same results obtained with manual interventions \citep{Lo}. The complexity lies in the little image resolution at the lower levels of the airway tree. Noise and other artefacts such as partial volume effect make the automatic identification of smaller branches even more difficult.
+\end{sloppypar}
 
 \approach
 
+\begin{sloppypar}
 One algorithm for the automatic segmentation of airway trees \citep{Pinho:Airways2} implements an iterative region growing with adaptive, cylindrical ROIs that employs anatomical information in the detection and elimination of leaks, a common problem in region growing. The method also includes an initialization step to automatically detect the starting point of the trachea, which is given as a seed point to the region growing algorithm. 
+\end{sloppypar}
 
 The intention is to extend the referred method and try to incorporate new ideas from the literature \citep{Lo} in order to increase the branch detection count, and to reduce the number of segmentation leaks and false positives. For example, tube enhancement filters \citep{ORLO-09} may help in at least isolating the tubular structures in the image, from where the detection process may be triggered. Artificial branch generation algorithms \citep{Tawhai2000} will also be investigated.
 
@@ -38,8 +45,9 @@ The vessels that compose the pulmonary vascular tree have a many-to-one relation
 
 \approach
 
+\begin{sloppypar}
 In theory, the algorithms proposed for the segmentation of the airways can be employed in the segmentation of pulmonary vascular tree, for the two trees have, overall, the same structure \citep{TawhaiM2011}. Therefore, we will investigate the use of the algorithms described in \citep{Lo}, for the airways, and also those proposed exclusively for the segmentation of the vascular tree, such as \citep{Dongen,Ebrahimdoost,Gutierrez,Linguraru,Shikata,Wala}.
-
+\end{sloppypar}
 
 \section{Patient-specific Airflow and Gas Exchange Simulations}
 
@@ -53,7 +61,9 @@ On the one hand, this is probably the most challenging part of the PulMoLab prop
 
 \approach
 
+\begin{sloppypar}
 The main objective in this part of the project is to study the work about modelling and simulations of gas exchange available in the recent literature, for example \citep{TawhaiM2011,Tawhai2010,Tawhai08,Burrowes2005,Lin2009,Werner2009,DeBacker2008,DeBacker2010,Gemci2007}. At the same time, it will be necessary to get fully acquainted with the work on the cardiovascular system developed at the HeMoLab group, most notably \citep{Blanco2007,Blanco2009a,Blanco2010,Blanco2012,Urquiza2006}. The next step will be to find opportunities for innovation so as to carry out the proposed extension of the work developed at the HeMoLab.
+\end{sloppypar}
 
 \section{Correlations Between Pulmonary Structure and Function}
 
@@ -63,5 +73,7 @@ As stated before, one of the most significant benefits of airflow and gas exchan
 
 \approach
 
+\begin{sloppypar}
 Since the aim is to find correlations in which shape variations are involved, the idea is to employ the aforementioned Active Shape Models (ASMs) \citep{Cootes} for this task. To the best of my knowledge, ASMs have never been used to correlate lung shape and function. Furthermore, the reader is reminded that research on the {\em statistical analysis of tree-like shapes}, e.g., the airway tree, is still in its early stages \citep{Feragen2011,Feragen2012}, so there may be many opportunities for innovation is this case. This approach will benefit from the results obtained with the estimation of healthy arteries, described in Section \ref{sec:healthyvessels}, and vice-versa.
+\end{sloppypar}
 

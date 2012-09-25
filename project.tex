@@ -9,6 +9,7 @@
 \usepackage[table]{xcolor}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{tocvsec2}
 % \usepackage{natbib}
  
 
@@ -25,8 +26,8 @@ the Launch of the Brazilian Lung Physiome}}
 \author{\LARGE{R\^omulo Teixeira de Abreu Pinho}}
 \date{Science Without Frontiers Programme\\
 Attraction of Young Talents\\
-Project Proposal \\
-(Third Call)}
+(60/2011 -- Third Call)\\
+Project Proposal}
 
 \begin{document}
 
@@ -47,8 +48,10 @@ Project Proposal \\
 \bibliographystyle{apalike}
 \bibliography{mybib,trachea,stents,artery,cfd}
 
-\include{references}
+\appendix
+\settocdepth{chapter}
 \include{cv}
+\include{references}
 
 %\section{Conclusions}
 
