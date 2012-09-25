@@ -1,18 +1,23 @@
 \documentclass[a4paper,11pt]{report}
 
+\usepackage[subsectionbib]{bibunits}
+\usepackage{multirow}
+\usepackage{longtable}
 \usepackage{fullpage}
 \usepackage{graphics}
 \usepackage{multirow}
 \usepackage[table]{xcolor}
 \usepackage{graphicx}
 \usepackage{pdfpages}
-\usepackage{natbib}
+% \usepackage{natbib}
+ 
 
 \newcommand{\fixedland}{{\it Fixed Landmarks}}
 \newcommand{\challenge}{\paragraph{Challenge}}
 \newcommand{\method}{\paragraph{Method}}
 \newcommand{\approach}{\paragraph{Proposed Approach}}
-% \newcommand{\citep}{\cite}
+\newcommand{\citep}{\cite}
+\newcommand{\citet}{\cite}
 
 \title{{\bf Modelling and Simulation of the Human Physiology:\\
 Applications to the Development of Vascular Stents\\and
@@ -43,6 +48,7 @@ Project Proposal \\
 \bibliography{mybib,trachea,stents,artery,cfd}
 
 \include{references}
+\include{cv}
 
 %\section{Conclusions}
 
